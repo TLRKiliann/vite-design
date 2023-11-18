@@ -41,9 +41,19 @@ main {
 }
 
 .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--color-red);
     border-radius: 7px;
     transition: ease-in-out 0.2s;
+}
+
+.square span {
+    font-size: 4rem;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .square:hover {
@@ -54,30 +64,69 @@ main {
 
 @keyframes animation-square {
     0% {
-        opacity: 1;
         background-color: var(--color-sandy);
     }
     50% {
-        opacity: 1;
         background-color: var(--color-sandy);
     }
     100% {
-        opacity: 1;
         background-color: var(--color-red);
     }
 }
 
-.activated-square:nth-child(n + 1) {
+.grid .activated-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: var(--color-red);
     border-radius: 7px;
-    opacity: 1;
 
     animation: animation-square;
-    animation-delay: 0s;
-    animation-duration: 1s;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    transition: 0.2s;
+}
 
+.grid .activated-square:nth-child(3) {
+    animation-delay: 0s;
+}
+
+.grid .activated-square:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.grid .activated-square:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.grid .activated-square:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.grid .activated-square:nth-child(7) {
+    animation-delay: 0.8s;
+}
+
+.grid .activated-square:nth-child(8) {
+    animation-delay: 1.0s;
+}
+
+.grid .activated-square:nth-child(9) {
+    animation-delay: 1.2s;
+}
+
+.grid .activated-square:nth-child(10) {
+    animation-delay: 1.4s;
+}
+
+.grid .activated-square:nth-child(11) {
+    animation-delay: 1.6s;
+}
+
+.activated-square span:nth-child(1) {
+    font-size: 4rem;
+    opacity: 1;
 }
 
 .button {

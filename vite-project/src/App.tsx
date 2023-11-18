@@ -1,35 +1,38 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
 
-  //const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(0);
   const [isActivate, setIsActivate] = useState<boolean>(false);
 
   const handleClickBtn1 = () => {
-    console.log("clicked 1")
+    console.log("clicked 1");
   }
 
   const handleClickBtn2 = () => {
-    console.log("clicked 2")
+    console.log("clicked 2");
   }
 
   const handleClickBtn3 = () => {
     setIsActivate(true);
   }
 
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       if (isActivate === true) {
-        setIsActivate(false)
+        setIsActivate(false);
+        setCount(prev => prev + 1);
       }
-    }, 1000)
+    }, 2000)
     timer;
     return () => {
-      console.log("useEffect done!")
       clearTimeout(timer);
+      //console.log("useEffect done!");
     }
-  }, [isActivate])
+  }, [isActivate]);
+  
 
   return (
     <main>
@@ -44,12 +47,16 @@ function App() {
           <p className='square_2--paragraph2'>text 2</p>
         </div>
 
-        <div id='square1' className={isActivate === false ? 'square' : 'activated-square'}></div>
+        <div id='square1' className={isActivate === false ? 'square' : 'activated-square'}>
+        </div>
         <div id='square2' className={isActivate === false ? 'square' : 'activated-square'}></div>
-        <div id='square3' className={isActivate === false ? 'square' : 'activated-square'}></div>
+        <div id='square3' className={isActivate === false ? 'square' : 'activated-square'}>
+        </div>
 
         <div id='square4' className={isActivate === false ? 'square' : 'activated-square'}></div>
-        <div id='square5' className={isActivate === false ? 'square' : 'activated-square'}></div>
+        <div id='square5' className={isActivate === false ? 'square' : 'activated-square'}>
+          <span>😃</span>
+        </div>
         <div id='square6' className={isActivate === false ? 'square' : 'activated-square'}></div>
 
         <div id='square7' className={isActivate === false ? 'square' : 'activated-square'}></div>
@@ -64,7 +71,7 @@ function App() {
 
       <div >
         <p>
-          Counter: {/*count*/}
+          Counter: {count}
         </p>
       </div>
 
