@@ -1,3 +1,27 @@
+@keyframes animation-square {
+    0% {
+        background-color: var(--color-sandy);
+    }
+    50% {
+        background-color: var(--color-sandy);
+    }
+    100% {
+        background-color: var(--color-red);
+    }
+}
+
+@keyframes second-animation {
+    0% {
+        background-color: var(--color-sandy);
+    }
+    50% {
+        background-color: var(--color-sandy);
+    }
+    100% {
+        background-color: var(--color-red);
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -62,18 +86,6 @@ main {
 
 /* animation */
 
-@keyframes animation-square {
-    0% {
-        background-color: var(--color-sandy);
-    }
-    50% {
-        background-color: var(--color-sandy);
-    }
-    100% {
-        background-color: var(--color-red);
-    }
-}
-
 .grid .activated-square {
     display: flex;
     justify-content: center;
@@ -83,7 +95,7 @@ main {
     border-radius: 7px;
 
     animation: animation-square;
-    animation-duration: 0.2s;
+    animation-duration: 0.3s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
@@ -127,6 +139,33 @@ main {
 .activated-square span:nth-child(1) {
     font-size: 4rem;
     opacity: 1;
+}
+
+.grid .activated-squaretwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--color-red);
+    border-radius: 7px;
+
+    animation: second-animation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+.grid .activated-squaretwo:nth-child(7) {
+    animation-delay: 0s;
+}
+
+.grid .activated-squaretwo:nth-child(8) {
+    animation-delay: 0.2s;
+}
+
+.grid .activated-squaretwo:nth-child(9) {
+    animation-delay: 0.4s;
 }
 
 .button {
