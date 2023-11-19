@@ -37,10 +37,14 @@ function App() {
   }
 
   const handleClickBtn3 = () => {
-    setIsActivate((prev) => ({...isActivate, boolThree: !prev.boolThree}))
+    setIsActivate((prev) => ({
+      ...isActivate,
+        boolThree: !prev.boolThree
+    }))
     setCount(prev => prev + 1);
   }
 
+  // reset first animation after 2700 ms
   useEffect(() => {
     const timer = setTimeout(() => {
       if (isActivate.boolOne === true) {
@@ -57,6 +61,7 @@ function App() {
     }
   }, [isActivate.boolOne]);
 
+  // reset second animation after 3200 ms
   useEffect(() => {
     const timer2 = setTimeout(() => {
       if (isActivate.boolTwo === true) {

@@ -2,11 +2,13 @@
   font-family: Arial, sans-serif;
   font-weight: 400;
 
-  --color-424242: #424242;
   --color-333: #333;
-  --color-square: #2c3239; 
+  --color-424242: #424242;
+  --color-444: #444;
+  --color-square: #2c3239;
+  --color-lightcyan: rgba(157,255,255, 0.2);
   --color-dark: #1f1f1f;
-  --color-lightgreen: #90ee90;
+  --color-lightgreen: #009688;
   --color-darkred: #8b0000;
   --color-red: #ff0000;
   --color-sandy: #f4a460;

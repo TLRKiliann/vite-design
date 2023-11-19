@@ -6,7 +6,7 @@
         background-color: var(--color-lightgreen);
     }
     100% {
-        background-color: var(--color-red);
+        background-color: var(--color-lightcyan);
     }
 }
 
@@ -15,19 +15,19 @@
         margin: 50px 0px;
         background-color: var(--color-red);
         border-radius: 0px;
-        box-shadow: 0px 0px 20px var(--color-red);
+        box-shadow: 0px 0px 10px var(--color-red);
     }
     50% {
         margin: 50px 0px;
         background-color: var(--color-red);
         border-radius: 0px;
-        box-shadow: 0px 0px 20px var(--color-red);
+        box-shadow: 0px 0px 10px var(--color-red);
     }
     100% {
         margin: 50px 0px;
         background-color: var(--color-darkred);
         border-radius: 0px;
-        box-shadow: 0px 0px 20px var(--color-red);
+        box-shadow: 0px 0px 10px var(--color-red);
     }
 }
 
@@ -93,7 +93,13 @@ main .grid .square span {
 }
 
 main .grid .square:hover {
-    background-color: #444;
+    cursor: pointer;
+    background-color: var(--color-444);
+}
+
+main .grid .square:active {
+    color: var(--color-424242);
+    background-color: var(--color-sandy);
 }
 
 main .grid .square:hover span {
@@ -109,7 +115,7 @@ main .grid .activated-square {
     justify-content: center;
     align-items: center;
 
-    background-color: var(--color-red);
+    background-color: var(--color-lightcyan);
     border-radius: 7px;
 
     animation: animation-square;
@@ -195,6 +201,12 @@ main .grid .activated-squaretwo:nth-child(8) {
     animation-delay: 0.5s;
 }
 
+main .grid .activated-squaretwo span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main .grid .activated-squaretwo span:nth-child(1) {
     font-size: 4rem;
     opacity: 0;
@@ -204,8 +216,8 @@ main .grid .activated-squaretwo span:nth-child(1) {
 /* Third animation */
 
 main .grid #square1 {
-    background-color: #424242;
-    transform: rotateZ(-360deg);
+    background-color: var(--color-424242);
+    transform: rotateY(-360deg);
     transition: ease 2s;
 }
 
@@ -215,8 +227,8 @@ main .grid #square1 span {
 }
 
 main .grid #square2 {
-    background-color: #424242;
-    transform: rotateZ(-360deg);
+    background-color: var(--color-424242);
+    transform: rotateY(-360deg);
     transition: ease 2s;
 }
 
@@ -226,8 +238,8 @@ main .grid #square2 span {
 }
 
 main .grid #square3 {
-    background-color: #424242;
-    transform: rotateZ(-360deg);
+    background-color: var(--color-424242);
+    transform: rotateY(-360deg);
     transition: ease 2s;
 }
 
@@ -237,7 +249,7 @@ main .grid #square3 span {
 }
 
 main .grid #square4 {
-    background-color: #424242;
+    background-color: var(--color-424242);
     transform: rotateY(-360deg);
     transition: ease 2s;
 }
@@ -248,8 +260,8 @@ main .grid #square4 span {
 }
 
 main .grid #square5 {
-    background-color: #424242;
-    transform: rotateY(-180deg);
+    background-color: var(--color-424242);
+    transform: rotateX(360deg);
     transition: ease 2s;
 }
 
@@ -259,7 +271,7 @@ main .grid #square5 span {
 }
 
 main .grid #square6 {
-    background-color: #424242;
+    background-color: var(--color-424242);
     transform: rotateY(-360deg);
     transition: ease 2s;
 }
@@ -270,8 +282,8 @@ main .grid #square6 span {
 }
 
 main .grid #square7 {
-    background-color: #424242;
-    transform: rotateZ(360deg);
+    background-color: var(--color-424242);
+    transform: rotateY(360deg);
     transition: ease 2s;
 }
 
@@ -281,8 +293,8 @@ main .grid #square7 span {
 }
 
 main .grid #square8 {
-    background-color: #424242;
-    transform: rotateZ(360deg);
+    background-color: var(--color-424242);
+    transform: rotateY(360deg);
     transition: ease 2s;
 }
 
@@ -292,8 +304,8 @@ main .grid #square8 span {
 }
 
 main .grid #square9 {
-    background-color: #424242;
-    transform: rotateZ(360deg);
+    background-color: var(--color-424242);
+    transform: rotateY(360deg);
     transition: ease 2s;
 }
 
@@ -311,6 +323,6 @@ main .grid .button {
 }
 
 main .grid .button:hover {
-    background-color: var(--color-424242);
+    background-color: var(--colorvar(--color-424242));
     color: var(--color-orange);
 }
